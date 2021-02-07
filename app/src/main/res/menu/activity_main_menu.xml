@@ -6,21 +6,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onOptionsItemSelected"
-            android:fontFamily="@font/roboto_medium"
             android:text="@string/obi_wan"
-            android:textColor="@color/black"/>
-        <group>
-
-        </group>
+            android:textColor="@color/yellow"/>
         <item
             android:id="@+id/menu2"
             android:title="@string/general_grevious"
             android:layout_width="wrap_content"
             android:onClick="onOptionsItemSelected"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_medium"
-            android:textColor="@color/black"
-            />
+            android:textColor="@color/yellow"/>
+        <item
+            android:id="@+id/menu3"
+            android:title="@string/emperor_palpatine"
+            android:layout_width="wrap_content"
+            android:onClick="onOptionsItemSelected"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"/>
     </group>
     <group></group>
 </menu>

@@ -2,5 +2,7 @@
 
     <style name="Theme.HelloThere" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:fontFamily">@font/star_wars_font_two</item>
+        <item name="android:textColor">@color/yellow</item>
     </style>
 </resources>

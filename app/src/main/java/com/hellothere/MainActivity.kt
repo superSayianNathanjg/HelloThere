@@ -1,10 +1,12 @@
 package com.hellothere
 
+import android.graphics.Typeface
 import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.res.ResourcesCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
@@ -14,8 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val firstFrag = ObiWanFrag()
-        val secondFrag = GeneralGerviousFrag()
         val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
+
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.frame_layout_fragment, firstFrag)
@@ -65,15 +67,15 @@ class MainActivity : AppCompatActivity() {
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.frame_layout_fragment, fragOne)
                     .commit()
-                Toast.makeText(this, "FUCK", Toast.LENGTH_LONG).show()
             }
             R.id.menu2 -> {
                 val secondFrag: GeneralGerviousFrag = GeneralGerviousFrag()
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.frame_layout_fragment, secondFrag)
                     .commit()
-
-                Toast.makeText(this, "FUCK This", Toast.LENGTH_LONG).show()
+            }
+            R.id.menu3 -> {
+                Toast.makeText(this, "Dewwwit, coming soon ;)", Toast.LENGTH_LONG).show()
             }
         };   drawerLayout.close()
         return true

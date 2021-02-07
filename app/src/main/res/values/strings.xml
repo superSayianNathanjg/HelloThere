@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">HelloThere!</string>
-    <string name="hello_there">Hello There</string>
-    <string name="general_kenobi">General Kenobi</string>
+    <string name="hello_there">hello there</string>
+    <string name="nav_title">Star Wars: Hello There</string>
+    <string name="general_kenobi">general kenobi</string>
     <string name="action_settings">Settings</string>
     <string name="action_favorite">Favourite</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="obi_wan">Obi Wan</string>
     <string name="general_grevious">General Grevious</string>
-    <string name="choose_a_voice">CHOOSE A VOICE</string>
+    <string name="choose_a_voice">choose a voice</string>
+    <string name="emperor_palpatine">Emperor Palpatine</string>
 </resources>
