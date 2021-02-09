@@ -15,7 +15,8 @@
     <string name="about_text">Hello There was made purely for fun.\n\n I am a Computer Science student
         and a passionate Star Wars fan.\n\nHoping to implement more quotes and features to this app as
         I become a better developer. \n\n
-        If you have any suggestions please feel free to email me at: \n\n
+        If you have any suggestions please feel free to email me at: \n
     </string>
     <string name="hellothereapp_gmail_com">hellothereapp@gmail.com</string>
+    <string name="patreon">\n\nAny help would be greatly appreciated\nhttps://www.patreon.com/hellothereapps</string>
 </resources>
