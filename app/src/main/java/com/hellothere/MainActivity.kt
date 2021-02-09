@@ -1,22 +1,24 @@
 package com.hellothere
 
-import android.graphics.Typeface
 import android.media.MediaPlayer
 import android.os.Bundle
-import android.view.*
-import android.widget.Toast
+import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.res.ResourcesCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
+    private final lateinit var mediaPlayer: MediaPlayer
+    private final lateinit var drawerLayout: DrawerLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val firstFrag = ObiWanFrag()
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
+        drawerLayout = findViewById(R.id.drawerLayout)
+        mediaPlayer = MediaPlayer.create(this, R.raw.hello_there_sound)
+        mediaPlayer.start()
 
 
         supportFragmentManager.beginTransaction().apply {
@@ -39,19 +41,28 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-
     fun soundHelloThere(view: View) {
-        val mediaPlayer: MediaPlayer = MediaPlayer.create(this, R.raw.hello_there_sound)
+        mediaPlayer = MediaPlayer.create(this, R.raw.hello_there_sound)
         view.setOnClickListener {
-            if (!mediaPlayer.isPlaying) {
-                mediaPlayer.start()
-            }
+//            if (!mediaPlayer.isPlaying) {
+//                mediaPlayer.start()
+//            }
+            mediaPlayer.start()
         }
     }
 
     fun soundKenobi(view: View) {
-        val mediaPlayer: MediaPlayer = MediaPlayer.create(this, R.raw.general_kenobi)
+        mediaPlayer = MediaPlayer.create(this, R.raw.general_kenobi_sound)
+        mediaPlayer.start()
+//        view.setOnClickListener {
+//            if (!mediaPlayer.isPlaying) {
+//                mediaPlayer.start()
+//            }
+//        }
+    }
+
+    fun soundPalpatine(view: View) {
+        mediaPlayer = MediaPlayer.create(this, R.raw.do_it_trimmed)
         view.setOnClickListener {
             if (!mediaPlayer.isPlaying) {
                 mediaPlayer.start()
@@ -60,25 +71,40 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
+        drawerLayout = findViewById(R.id.drawerLayout)
         when (item.itemId) {
             R.id.menu1 -> {
                 val fragOne: ObiWanFrag = ObiWanFrag()
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.frame_layout_fragment, fragOne)
+                    .addToBackStack(null)
                     .commit()
             }
             R.id.menu2 -> {
-                val secondFrag: GeneralGerviousFrag = GeneralGerviousFrag()
+                val secondFrag: GeneralGreviousFrag = GeneralGreviousFrag()
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.frame_layout_fragment, secondFrag)
+                    .addToBackStack(null)
                     .commit()
             }
             R.id.menu3 -> {
-                Toast.makeText(this, "Dewwwit, coming soon ;)", Toast.LENGTH_LONG).show()
+                val thirdFrag: PapaPalpsFrag = PapaPalpsFrag()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frame_layout_fragment, thirdFrag)
+                    .addToBackStack(null)
+                    .commit()
+            }
+            R.id.about -> {
+                val fourthFrag: AboutFragment = AboutFragment()
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.frame_layout_fragment, fourthFrag)
+                    .addToBackStack(null)
+                    .commit()
             }
         };   drawerLayout.close()
         return true
     }
+
+
 
 }

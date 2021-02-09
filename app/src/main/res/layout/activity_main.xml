@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:id="@+id/drawerLayout"
-    android:background="@drawable/back_ground_xhdpi"
+    android:background="@drawable/star_wars_dark_background_xhdpi"
     tools:openDrawer="start">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,8 +15,8 @@
 
         <FrameLayout
             android:id="@+id/frame_layout_fragment"
-            android:layout_width="434dp"
-            android:layout_height="675dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -31,14 +31,15 @@
             android:layout_height="match_parent" />
 
 
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
 
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/navigationView"
-            android:layout_width="wrap_content"
-            android:background="#7F9896"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            app:headerLayout="@layout/header_navigation_drawer"
-            app:menu="@menu/activity_main_menu"/>
+        android:background="@color/black"
+        app:headerLayout="@layout/header_navigation_drawer"
+        app:itemTextColor="@color/yellow"
+        app:menu="@menu/activity_main_menu" />
 
     </androidx.drawerlayout.widget.DrawerLayout>

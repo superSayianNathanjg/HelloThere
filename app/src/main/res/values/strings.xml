@@ -9,5 +9,7 @@
     <string name="obi_wan">Obi Wan</string>
     <string name="general_grevious">General Grevious</string>
     <string name="choose_a_voice">choose a voice</string>
-    <string name="emperor_palpatine">Emperor Palpatine</string>
+    <string name="emperor_palpatine">Chancellor Palpatine</string>
+    <string name="do_it">Do it</string>
+    <string name="about">About</string>
 </resources>

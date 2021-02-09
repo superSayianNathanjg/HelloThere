@@ -6,7 +6,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onOptionsItemSelected"
-            android:text="@string/obi_wan"
             android:textColor="@color/yellow"/>
         <item
             android:id="@+id/menu2"
@@ -23,5 +22,14 @@
             android:layout_height="wrap_content"
             android:textColor="@color/yellow"/>
     </group>
-    <group></group>
+    <group android:menuCategory="secondary">
+        <item
+            android:id="@+id/about"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onOptionsItemSelected"
+            android:textColor="@color/yellow"
+            android:title="@string/about" />
+    </group>
+    <group />
 </menu>

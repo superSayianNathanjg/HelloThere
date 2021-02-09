@@ -6,8 +6,4 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 
-class ObiWanFrag : Fragment(R.layout.fragment_obi_wan) {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-}
+class PapaPalpsFrag : Fragment(R.layout.fragment_palpatine)

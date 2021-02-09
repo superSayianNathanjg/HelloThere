@@ -8,16 +8,17 @@
 
 
     <Button
-        android:id="@+id/hello_there"
+        android:id="@+id/do_it"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/black"
+        android:layout_marginTop="456dp"
         android:fontFamily="@font/death_star"
-        android:onClick="soundHelloThere"
-        android:text="@string/hello_there"
+        android:backgroundTint="@color/black"
+        android:onClick="soundPalpatine"
+        android:text="@string/do_it"
         android:textColor="@color/yellow"
-        app:layout_constraintBottom_toBottomOf="@+id/gifImageViewObiWan"
+        app:layout_constraintBottom_toBottomOf="@+id/palpatineGif"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,11 +27,11 @@
         app:rippleColor="#FFDE06" />
 
     <pl.droidsonroids.gif.GifImageView
-        android:id="@+id/gifImageViewObiWan"
+        android:id="@+id/palpatineGif"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:onClick="soundHelloThere"
-        android:src="@drawable/obi_wan_gif"
+        android:onClick="soundPalpatine"
+        android:src="@drawable/palpatine_do_it"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
