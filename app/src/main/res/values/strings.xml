@@ -12,4 +12,10 @@
     <string name="emperor_palpatine">Chancellor Palpatine</string>
     <string name="do_it">Do it</string>
     <string name="about">About</string>
+    <string name="about_text">Hello There was made purely for fun.\n\n I am a Computer Science student
+        and a passionate Star Wars fan.\n\nHoping to implement more quotes and features to this app as
+        I become a better developer. \n\n
+        If you have any suggestions please feel free to email me at: \n\n
+    </string>
+    <string name="hellothereapp_gmail_com">hellothereapp@gmail.com</string>
 </resources>

@@ -4,10 +4,12 @@ import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private final lateinit var mediaPlayer: MediaPlayer
@@ -39,16 +41,18 @@ class MainActivity : AppCompatActivity() {
             drawerLayout.close()
             true
         }
+
     }
 
     fun soundHelloThere(view: View) {
         mediaPlayer = MediaPlayer.create(this, R.raw.hello_there_sound)
-        view.setOnClickListener {
-//            if (!mediaPlayer.isPlaying) {
-//                mediaPlayer.start()
-//            }
-            mediaPlayer.start()
-        }
+//        view.setOnClickListener {
+////            if (!mediaPlayer.isPlaying) {
+////                mediaPlayer.start()
+////            }
+//
+//        }
+        mediaPlayer.start()
     }
 
     fun soundKenobi(view: View) {
@@ -63,11 +67,12 @@ class MainActivity : AppCompatActivity() {
 
     fun soundPalpatine(view: View) {
         mediaPlayer = MediaPlayer.create(this, R.raw.do_it_trimmed)
-        view.setOnClickListener {
-            if (!mediaPlayer.isPlaying) {
-                mediaPlayer.start()
-            }
-        }
+//        view.setOnClickListener {
+//            if (!mediaPlayer.isPlaying) {
+//
+//            }
+//        }
+        mediaPlayer.start()
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
