@@ -21,6 +21,13 @@
             android:onClick="onOptionsItemSelected"
             android:layout_height="wrap_content"
             android:textColor="@color/yellow"/>
+        <item
+            android:id="@+id/menu4"
+            android:title="@string/darth_vader"
+            android:layout_width="wrap_content"
+            android:onClick="onOptionsItemSelected"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"/>
     </group>
     <group android:menuCategory="secondary">
         <item

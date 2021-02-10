@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HelloThere!</string>
+    <string name="app_name">HelloThere</string>
     <string name="hello_there">hello there</string>
     <string name="nav_title">Star Wars: Hello There</string>
     <string name="general_kenobi">general kenobi</string>
@@ -18,4 +18,6 @@
         \n\nAny help would be greatly appreciated:\n</string>
     <string name = "patreon_link"><a href="https://www.patreon.com/hellothereapps/">Patreon</a></string>
     <string name="mute_sound">Mute sound</string>
+    <string name="no_i_am_your_farther">No, I am your farther</string>
+    <string name="darth_vader">Darth Vader</string>
 </resources>

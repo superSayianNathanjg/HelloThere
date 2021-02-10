@@ -4,7 +4,6 @@ import android.media.MediaPlayer
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.appbar.MaterialToolbar
@@ -18,7 +17,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var fragOne: ObiWanFrag = ObiWanFrag()
     private var secondFrag: GeneralGreviousFrag = GeneralGreviousFrag()
     private var thirdFrag: PapaPalpsFrag = PapaPalpsFrag()
-    private var fourthFrag: AboutFragment = AboutFragment()
+    private var fourthFrag: DarthVaderFrag = DarthVaderFrag()
+    private var aboutFrag: AboutFragment = AboutFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,13 +49,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(view: View) {
         mediaPlayer = MediaPlayer.create(this, R.raw.hello_there_sound)
-
         if (view.id == R.id.hello_there || view.id == R.id.gifImageViewObiWan) {
             playSound(R.raw.hello_there_sound)
         } else if (view.id == R.id.general_kenobi || view.id == R.id.gifImageViewGrevious) {
             playSound(R.raw.general_kenobi_sound)
         } else if (view.id == R.id.do_it || view.id == R.id.palpatineGif) {
             playSound(R.raw.do_it_trimmed)
+        }
+        else if (view.id == R.id.i_am_your_button || view.id == R.id.i_am_your_father_gif) {
+            playSound(R.raw.i_am_your_sound)
         }
     }
 
@@ -92,9 +94,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         .addToBackStack(null)
                         .commit()
             }
-            R.id.about -> { // About page
+            R.id.menu4 -> { // Darth Vader
                 supportFragmentManager.beginTransaction()
                         .replace(R.id.frame_layout_fragment, fourthFrag)
+                        .addToBackStack(null)
+                        .commit()
+            }
+            R.id.about -> { // About page
+                supportFragmentManager.beginTransaction()
+                        .replace(R.id.frame_layout_fragment, aboutFrag)
                         .addToBackStack(null)
                         .commit()
             }

@@ -4,5 +4,7 @@
         <item name="android:windowTranslucentStatus">true</item>
         <item name="android:fontFamily">@font/death_star</item>
         <item name="android:textColor">@color/yellow</item>
+
+        <item name="colorControlActivated"> @color/yellow</item>
     </style>
 </resources>
