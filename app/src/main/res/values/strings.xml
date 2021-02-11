@@ -18,6 +18,16 @@
         \n\nAny help would be greatly appreciated:\n</string>
     <string name = "patreon_link"><a href="https://www.patreon.com/hellothereapps/">Patreon</a></string>
     <string name="mute_sound">Mute sound</string>
-    <string name="no_i_am_your_farther">No, I am your farther</string>
+    <string name="no_i_am_your_farther">Your Father</string>
     <string name="darth_vader">Darth Vader</string>
+    <string name="situation">Situation</string>
+    <string name="coughing">Coughing</string>
+    <string name="larger_step">Larger Step</string>
+    <string name="the_senate">The Senate</string>
+    <string name="order66">Order 66</string>
+    <string name="apology">Apology</string>
+    <string name="lack_of_faith">Lack of Faith</string>
+    <string name="no_vader">Noooo</string>
+    <string name="yes">Yes</string>
+    <string name="don_t_fail_me">Don\'t Fail Me</string>
 </resources>
