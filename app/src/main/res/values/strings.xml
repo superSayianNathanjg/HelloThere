@@ -22,7 +22,6 @@
     <string name="darth_vader">Darth Vader</string>
     <string name="situation">Situation</string>
     <string name="coughing">Coughing</string>
-    <string name="larger_step">Larger Step</string>
     <string name="the_senate">The Senate</string>
     <string name="order66">Order 66</string>
     <string name="apology">Apology</string>
@@ -30,4 +29,11 @@
     <string name="no_vader">Noooo</string>
     <string name="yes">Yes</string>
     <string name="don_t_fail_me">Don\'t Fail Me</string>
+    <string name="high_ground">High Ground</string>
+    <string name="good_job">Good Job</string>
+    <string name="goodbye">Goodbye</string>
+    <string name="half_a_ship">Half a ship</string>
+    <string name="first_step">First Step</string>
+    <string name="goooood">Goooood</string>
+    <string name="too_weak">Too Weak</string>
 </resources>

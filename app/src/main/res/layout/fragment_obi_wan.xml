@@ -17,11 +17,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <HorizontalScrollView
+    <ScrollView
         android:id="@+id/scroll_bar"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:scrollbars="horizontal"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +30,8 @@
         <LinearLayout
             android:id="@+id/lin_layout"
             android:layout_width="wrap_content"
-            android:layout_height="200dp"
+            android:layout_height="300dp"
+            android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@+id/gifImageViewObiWan">
 
             <Button
@@ -40,11 +41,64 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/black"
                 android:fontFamily="@font/death_star"
-                android:textSize="12sp"
                 android:onClick="onClick"
                 android:text="@string/hello_there"
                 android:textColor="@color/yellow"
+                android:textSize="12sp"
                 app:rippleColor="#FFDE06" />
+
+            <Button
+                android:id="@+id/high_ground_obi"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="147dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/death_star"
+                android:onClick="onClick"
+                android:text="@string/high_ground"
+                android:textColor="@color/yellow"
+                android:textSize="12sp"
+                app:rippleColor="#FFDE06" />
+
+            <Button
+                android:id="@+id/good_job_obi"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="147dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/death_star"
+                android:onClick="onClick"
+                android:text="@string/good_job"
+                android:textColor="@color/yellow"
+                android:textSize="12sp"
+                app:rippleColor="#FFDE06" />
+
+            <Button
+                android:id="@+id/goodbye_obi"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="147dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/death_star"
+                android:onClick="onClick"
+                android:text="@string/goodbye"
+                android:textColor="@color/yellow"
+                android:textSize="12sp"
+                app:rippleColor="#FFDE06" />
+
+            <Button
+                android:id="@+id/half_a_ship_obi"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="147dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/death_star"
+                android:onClick="onClick"
+                android:text="@string/half_a_ship"
+                android:textColor="@color/yellow"
+                android:textSize="12sp"
+                app:rippleColor="#FFDE06" />
+
 
             <Button
                 android:id="@+id/older_kenobi"
@@ -54,11 +108,11 @@
                 android:backgroundTint="@color/black"
                 android:fontFamily="@font/death_star"
                 android:onClick="onClick"
-                android:text="@string/larger_step"
+                android:text="@string/first_step"
                 android:textColor="@color/yellow"
                 android:textSize="12sp"
                 app:rippleColor="#FFDE06" />
 
         </LinearLayout>
-    </HorizontalScrollView>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
