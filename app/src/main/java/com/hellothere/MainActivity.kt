@@ -139,6 +139,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.older_kenobi -> {
                 soundPool.play(oldKenobi, 1F, 1F, 0, 0, 1F)
             }
+
             // Grevious
             R.id.general_kenobi -> {
                 soundPool.play(generalKenobi, 1F, 1F, 0, 0, 1F)
@@ -149,6 +150,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.grevious_coughing -> {
             soundPool.play(coughing, 1F, 1F, 0, 0, 1F)
             }
+
             // Palpatine
             R.id.do_it -> {
                 soundPool.play(doIt, 1F, 1F, 0, 0, 1F)
@@ -165,77 +167,27 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.weak_palpatine -> {
                 soundPool.play(weakPalpatine, 1F, 1F, 0, 0, 1F)
             }
+
+            // Darth Vader
+            R.id.i_am_your_button -> {
+                soundPool.play(iAmYourFather, 1F, 1F, 0, 0, 1F)
+            }
+            R.id.apology_vader -> {
+                soundPool.play(apologyAccepted, 1F, 1F, 0, 0, 1F)
+            }
+            R.id.lack_of_faith_vader -> {
+            soundPool.play(lackOfFaith, 1F, 1F, 0, 0, 1F)
+            }
+            R.id.yes_vader -> {
+            soundPool.play(yesVader, 1F, 1F, 0, 0, 1F)
+            }
+            R.id.fail_me_vader -> {
+                soundPool.play(dontFailMe, 1F, 1F, 0, 0, 1F)
+            }
+            R.id.noooo -> {
+                soundPool.play(noooVader, 1F, 1F, 0, 0, 1F)
+            }
         }
-
-
-//        if (view.id == R.id.hello_there || view.id == R.id.gifImageViewObiWan) {
-//            playSound(R.raw.hello_there_sound)
-//
-//        }
-//        else if (view.id == R.id.high_ground_obi) {
-//            playSound(R.raw.high_ground_kenobi)
-//        }
-//        else if (view.id == R.id.good_job_obi) {
-//            playSound(R.raw.good_job_kenobi)
-//        }
-//        else if (view.id == R.id.goodbye_obi) {
-//            playSound(R.raw.goodbye_kenobi)
-//        }
-//        else if (view.id == R.id.half_a_ship_obi) {
-//            playSound(R.raw.half_ship_kenobi)
-//        }
-//        else if (view.id == R.id.older_kenobi) {
-//            playSound(R.raw.kenobi_old)
-//        }
-//
-//        // Grevious
-//        else if (view.id == R.id.general_kenobi || view.id == R.id.gifImageViewGrevious) {
-//            playSound(R.raw.general_kenobi_sound)
-//        }else if (view.id == R.id.grevious_coughing) {
-//            playSound(R.raw.grevious_coughing)
-//        }
-//        else if (view.id == R.id.grevious_situation) {
-//            playSound(R.raw.general_grevious_situation)
-//        }
-//
-//
-//        // Palpatine
-//        else if (view.id == R.id.do_it || view.id == R.id.palpatineGif) {
-//            playSound(R.raw.do_it_trimmed)
-//        }
-//        else if (view.id == R.id.order_66_palpatine) {
-//            playSound(R.raw.order66_palpatine)
-//        }
-//        else if (view.id == R.id.senate) {
-//            playSound(R.raw.senate_palpatine)
-//        }
-//        else if (view.id == R.id.good_palpatine) {
-//            playSound(R.raw.good_palpatine)
-//        }
-//        else if (view.id == R.id.weak_palpatine) {
-//            playSound(R.raw.too_weak_palpatine)
-//        }
-//
-//        // Vader
-//        else if (view.id == R.id.i_am_your_button || view.id == R.id.i_am_your_father_gif) {
-//            playSound(R.raw.i_am_your_sound)
-//        }
-//        else if (view.id == R.id.lack_of_faith_vader) {
-//            playSound(R.raw.faith_vader)
-//        }
-//        else if (view.id == R.id.yes_vader) {
-//            playSound(R.raw.yes_vader)
-//        }
-//        else if (view.id == R.id.fail_me_vader) {
-//            playSound(R.raw.fail_me_vader)
-//        }
-//        else if (view.id == R.id.apology_vader) {
-//            playSound(R.raw.apology_vader)
-//        }
-//        else if (view.id == R.id.noooo) {
-//            playSound(R.raw.nooo)
-//        }
-
     }
 
     override fun onDestroy() {
@@ -243,13 +195,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         soundPool.release()
     }
 
-    private fun playSound(soundID: Int) {
-
-    }
-
-//    private fun onCompletion(mediaPlayer: MediaPlayer?) {
-//        mediaPlayer?.reset()
-//    }
 
     // Navigation Menu
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
