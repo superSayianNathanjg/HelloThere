@@ -58,17 +58,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
         drawerLayout = findViewById(R.id.drawerLayout)
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        soundPool = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val audioAttributes: AudioAttributes? = AudioAttributes.Builder()
-                    .setUsage(AudioAttributes.USAGE_ASSISTANCE_SONIFICATION)
+                    .setUsage(AudioAttributes.USAGE_GAME)
                     .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
                     .build()
-            soundPool = SoundPool.Builder()
+            SoundPool.Builder()
                     .setMaxStreams(5)
                     .setAudioAttributes(audioAttributes)
                     .build()
         } else {
-            soundPool = SoundPool(5, AudioManager.STREAM_MUSIC, 0)
+            SoundPool(1, AudioManager.STREAM_MUSIC, 0)
         }
 
         // Loading SoundPool
@@ -81,24 +81,25 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         oldKenobi = soundPool.load(this, R.raw.kenobi_old, 1)
 
         // Grevious
-        generalKenobi = soundPool.load(this, R.raw.general_kenobi_sound,1)
-        situation = soundPool.load(this, R.raw.general_grevious_situation,1)
-        coughing = soundPool.load(this, R.raw.grevious_coughing ,1)
+        generalKenobi = soundPool.load(this, R.raw.general_kenobi_sound, 1)
+        situation = soundPool.load(this, R.raw.general_grevious_situation, 1)
+        coughing = soundPool.load(this, R.raw.grevious_coughing, 1)
 
         // Palpatine
-        doIt = soundPool.load(this, R.raw.do_it_trimmed , 1)
-        order66 = soundPool.load(this,R.raw.order66_palpatine , 1)
-        senate = soundPool.load(this,R.raw.senate_palpatine , 1)
-        goodPalpatine = soundPool.load(this,R.raw.good_palpatine , 1)
-        weakPalpatine = soundPool.load(this, R.raw.too_weak_palpatine , 1)
+        doIt = soundPool.load(this, R.raw.do_it_trimmed, 1)
+        order66 = soundPool.load(this, R.raw.order66_palpatine, 1)
+        senate = soundPool.load(this, R.raw.senate_palpatine, 1)
+        goodPalpatine = soundPool.load(this, R.raw.good_palpatine, 1)
+        weakPalpatine = soundPool.load(this, R.raw.too_weak_palpatine, 1)
 
         // Darth Vader
-       iAmYourFather = soundPool.load(this,R.raw.i_am_your_sound , 1)
-       apologyAccepted = soundPool.load(this, R.raw.apology_vader , 1)
-       lackOfFaith = soundPool.load(this,R.raw.faith_vader , 1)
-       yesVader = soundPool.load(this, R.raw.yes_vader, 1)
-       dontFailMe = soundPool.load(this, R.raw.fail_me_vader, 1)
-       noooVader = soundPool.load(this,R.raw.nooo , 1)
+        iAmYourFather = soundPool.load(this, R.raw.i_am_your_sound, 1)
+        apologyAccepted = soundPool.load(this, R.raw.apology_vader, 1)
+        lackOfFaith = soundPool.load(this, R.raw.faith_vader, 1)
+        yesVader = soundPool.load(this, R.raw.yes_vader, 1)
+        dontFailMe = soundPool.load(this, R.raw.fail_me_vader, 1)
+        noooVader = soundPool.load(this, R.raw.nooo, 1)
+
 
         /* Navigation */
         supportFragmentManager.beginTransaction().apply {
@@ -115,14 +116,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             drawerLayout.close()
             true
         }
-
     }
+
 
     override fun onClick(view: View) {
         when (view.id) {
             // Obi Wan
             R.id.hello_there -> {
                 soundPool.play(helloThere, 1F, 1F, 0, 0, 1F)
+                return
             }
             R.id.high_ground_obi -> {
                 soundPool.play(highGround, 1F, 1F, 0, 0, 1F)
@@ -145,10 +147,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 soundPool.play(generalKenobi, 1F, 1F, 0, 0, 1F)
             }
             R.id.grevious_situation -> {
-            soundPool.play(situation, 1F, 1F, 0, 0, 1F)
+                soundPool.play(situation, 1F, 1F, 0, 0, 1F)
             }
             R.id.grevious_coughing -> {
-            soundPool.play(coughing, 1F, 1F, 0, 0, 1F)
+                soundPool.play(coughing, 1F, 1F, 0, 0, 1F)
             }
 
             // Palpatine
@@ -176,10 +178,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 soundPool.play(apologyAccepted, 1F, 1F, 0, 0, 1F)
             }
             R.id.lack_of_faith_vader -> {
-            soundPool.play(lackOfFaith, 1F, 1F, 0, 0, 1F)
+                soundPool.play(lackOfFaith, 1F, 1F, 0, 0, 1F)
             }
             R.id.yes_vader -> {
-            soundPool.play(yesVader, 1F, 1F, 0, 0, 1F)
+                soundPool.play(yesVader, 1F, 1F, 0, 0, 1F)
             }
             R.id.fail_me_vader -> {
                 soundPool.play(dontFailMe, 1F, 1F, 0, 0, 1F)
