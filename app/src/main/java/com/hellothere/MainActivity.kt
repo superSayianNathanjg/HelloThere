@@ -1,5 +1,10 @@
+/*
+ * Copyright (c)  . All rights reserved.
+ */
+
 package com.hellothere
 
+import android.content.Intent
 import android.media.AudioAttributes
 import android.media.AudioManager
 import android.media.SoundPool
@@ -18,7 +23,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     /* Fragments */
     private val fragOne: ObiWanFrag = ObiWanFrag()
-    private val fragTwo: GeneralGreviousFrag = GeneralGreviousFrag()
+    private val fragTwo: GeneralGrievousFrag = GeneralGrievousFrag()
     private val fragThree: PapaPalpsFrag = PapaPalpsFrag()
     private val fragFour: DarthVaderFrag = DarthVaderFrag()
     private val fragAbout: AboutFragment = AboutFragment()
@@ -56,17 +61,20 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        drawerLayout = findViewById(R.id.drawerLayout)
+
+        drawerLayout = findViewById(R.id.drawerLayout) // Drawer menu
+
+        var share = findViewById<View>(R.id.share_button) // Share button
 
         soundPool = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             val audioAttributes: AudioAttributes? = AudioAttributes.Builder()
-                    .setUsage(AudioAttributes.USAGE_GAME)
-                    .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
-                    .build()
+                .setUsage(AudioAttributes.USAGE_GAME)
+                .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+                .build()
             SoundPool.Builder()
-                    .setMaxStreams(5)
-                    .setAudioAttributes(audioAttributes)
-                    .build()
+                .setMaxStreams(5)
+                .setAudioAttributes(audioAttributes)
+                .build()
         } else {
             SoundPool(1, AudioManager.STREAM_MUSIC, 0)
         }
@@ -117,7 +125,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             true
         }
     }
-
 
     override fun onClick(view: View) {
         when (view.id) {
@@ -192,48 +199,58 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
+    // Soundpool destroy.
     override fun onDestroy() {
         super.onDestroy()
         soundPool.release()
     }
 
-
-    // Navigation Menu
+    // Navigation Menu.
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         drawerLayout = findViewById(R.id.drawerLayout)
         when (item.itemId) {
             R.id.menu1 -> { // Obi Wan
                 supportFragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout_fragment, fragOne)
-                        .addToBackStack(null)
-                        .commit()
+                    .replace(R.id.frame_layout_fragment, fragOne)
+                    .addToBackStack(null)
+                    .commit()
             }
             R.id.menu2 -> { // General Grevious
                 supportFragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout_fragment, fragTwo)
-                        .addToBackStack(null)
-                        .commit()
+                    .replace(R.id.frame_layout_fragment, fragTwo)
+                    .addToBackStack(null)
+                    .commit()
             }
             R.id.menu3 -> { // Palpatine
                 supportFragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout_fragment, fragThree)
-                        .addToBackStack(null)
-                        .commit()
+                    .replace(R.id.frame_layout_fragment, fragThree)
+                    .addToBackStack(null)
+                    .commit()
             }
             R.id.menu4 -> { // Darth Vader
                 supportFragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout_fragment, fragFour)
-                        .addToBackStack(null)
-                        .commit()
+                    .replace(R.id.frame_layout_fragment, fragFour)
+                    .addToBackStack(null)
+                    .commit()
             }
             R.id.about -> { // About page
                 supportFragmentManager.beginTransaction()
-                        .replace(R.id.frame_layout_fragment, fragAbout)
-                        .addToBackStack(null)
-                        .commit()
+                    .replace(R.id.frame_layout_fragment, fragAbout)
+                    .addToBackStack(null)
+                    .commit()
             }
         }; drawerLayout.close()
         return true
+    }
+
+    // Share button logic.
+    fun shareIntent(item: MenuItem) {
+        val shareIntent = Intent()
+        shareIntent.action = Intent.ACTION_SEND
+        shareIntent.putExtra(Intent.EXTRA_SUBJECT, "HelloThere!")
+        shareIntent.putExtra(Intent.EXTRA_TEXT, "Check it out!")
+        shareIntent.type = "text/plain"
+        startActivity(Intent.createChooser(shareIntent, "Share HelloThere to:"))
     }
 
 }

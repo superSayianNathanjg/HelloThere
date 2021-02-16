@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c)  . All rights reserved.
+  -->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,10 +22,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <HorizontalScrollView
+    <ScrollView
         android:id="@+id/scroll_bar"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +35,7 @@
         <LinearLayout
             android:id="@+id/lin_layout"
             android:layout_width="wrap_content"
-            android:layout_height="200dp"
+            android:layout_height="300dp"
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@+id/palpatineGif">
 
@@ -100,5 +105,5 @@
                 app:rippleColor="#FFDE06" />
 
         </LinearLayout>
-    </HorizontalScrollView>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

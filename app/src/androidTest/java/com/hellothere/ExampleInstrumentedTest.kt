@@ -1,3 +1,7 @@
+/*
+ * Copyright (c)  . All rights reserved.
+ */
+
 package com.hellothere
 
 import androidx.test.platform.app.InstrumentationRegistry

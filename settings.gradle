@@ -1,2 +1,6 @@
+/*
+ * Copyright (c)  . All rights reserved.
+ */
+
 rootProject.name = "HelloThere"
 include ':app'

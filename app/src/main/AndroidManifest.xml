@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c)  . All rights reserved.
+  -->
+
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hellothere">
+    package="com.hellothere"
+    android:versionCode="1"
+    android:versionName="HelloThere">
 
     <application
         android:fullBackupOnly="true"

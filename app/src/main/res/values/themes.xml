@@ -1,3 +1,7 @@
+<!--
+  ~ Copyright (c)  . All rights reserved.
+  -->
+
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Theme.HelloThere" parent="Theme.MaterialComponents.DayNight.NoActionBar">

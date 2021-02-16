@@ -1,0 +1,7 @@
+<component name="CopyrightManager">
+  <settings default="Lucasfilm">
+    <module2copyright>
+      <element module="All" copyright="Lucasfilm" />
+    </module2copyright>
+  </settings>
+</component>

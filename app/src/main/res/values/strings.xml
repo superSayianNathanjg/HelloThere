@@ -1,3 +1,5 @@
+
+
 <resources>
     <string name="app_name">HelloThere</string>
     <string name="hello_there">hello there</string>
@@ -7,16 +9,18 @@
     <string name="action_favorite">Favourite</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="obi_wan">Obi Wan</string>
-    <string name="general_grevious">General Grevious</string>
+    <string name="general_grevious">General Grievous</string>
     <string name="choose_a_voice">choose a voice</string>
     <string name="emperor_palpatine">Chancellor Palpatine</string>
     <string name="do_it">Do it</string>
     <string name="about">About</string>
-    <string name="about_text">Hello There was made purely for fun.\n\n I am a Computer Science student
-        and a passionate Star Wars fan.\n\nPlanning to implement more quotes and features to this app along my journey to becoming a better developer.\n\n
-        If you have any suggestions please feel free to email me:\nhellothereapp@gmail.com
-        \n\nAny help would be greatly appreciated:\n</string>
-    <string name = "patreon_link"><a href="https://www.patreon.com/hellothereapps/">Patreon</a></string>
+    <string name="about_text">Hello There was made purely for fun.\n\n I am an Australian Computer Science student
+        and a passionate Star Wars fan.\n\nPlanning to implement more voices, quotes, and features to this app along my journey to becoming a better developer.\n\n
+        If you have any suggestions please feel free to email me:\nhellothereapp@gmail.com\n\n
+        All voices and mp3 sounds belong to Lucasfilm and Disney. Copyright © Lucasfilm/Disney
+    </string>
+
+
     <string name="mute_sound">Mute sound</string>
     <string name="no_i_am_your_farther">Your Father</string>
     <string name="darth_vader">Darth Vader</string>
@@ -36,4 +40,5 @@
     <string name="first_step">First Step</string>
     <string name="goooood">Goooood</string>
     <string name="too_weak">Too Weak</string>
+    <string name="share">Share</string>
 </resources>

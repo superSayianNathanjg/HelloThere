@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c)  . All rights reserved.
+  -->
+
 <resources>
     <color name="purple_200">#2474FF</color>
     <color name="purple_500">#FF6200EE</color>
