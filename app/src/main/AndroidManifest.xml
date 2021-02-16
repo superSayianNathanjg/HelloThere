@@ -5,7 +5,7 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hellothere"
+    package="com.hellothereapp"
     android:versionCode="1"
     android:versionName="HelloThere">
 
@@ -17,7 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HelloThere"
         android:fullBackupContent="@xml/backup_descriptor">
-        <activity android:name=".MainActivity"
+        <activity android:name="com.hellothereapp.MainActivity"
                   android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
